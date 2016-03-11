@@ -37,8 +37,10 @@ class Person: Equatable {
     func dictionaryCopy() -> Dictionary<String, AnyObject> {
         
         let dictionary = [
-            kName
+            kName: self.name,
+            kAge: self.age
         ]
+        return dictionary
     }
 }
 

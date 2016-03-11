@@ -12,16 +12,21 @@ class PersonController {
     
     private let personsKey = "persons"
     
+    static let sharedController = PersonController()
+    
     var persons: [Person]
     
     init() {
         
         self.persons = []
+        
+        self.loadToPersistentStorage()
     }
 
     func addPerson(person: Person) {
         
         persons.append(person)
+        self.saveToPersistentStorage()
         
     }
     
@@ -43,5 +48,9 @@ class PersonController {
     func saveToPersistentStorage() {
         
         let personDictionariesSaved = self.persons.map({$0.dictionaryCopy()})
+        
+        NSUserDefaults.standardUserDefaults().setObject(personDictionariesSaved, forKey: personsKey)
+        
+        /// study .map syntax
     }
 }

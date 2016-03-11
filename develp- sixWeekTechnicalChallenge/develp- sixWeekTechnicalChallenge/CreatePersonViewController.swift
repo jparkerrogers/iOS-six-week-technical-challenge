@@ -14,17 +14,42 @@ class CreatePersonViewController: UIViewController {
     
     @IBOutlet weak var ageTextField: UITextField!
     
+    var person: Person?
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+    }
     
     @IBAction func clearButtonTapped(sender: AnyObject) {
+        
+        nameTextField.text = ""
+        ageTextField.text = ""
     }
     
     @IBAction func saveButtonTapped(sender: AnyObject) {
+        
+        if let person = self.person {
+            person.name = self.nameTextField.text!
+            person.age = self.ageTextField.text!
+        } else {
+            let newPerson = Person(name: self.nameTextField.text!, age: self.ageTextField.text!)
+            PersonController.sharedController.addPerson(newPerson)
+            self.person = newPerson
+        }
+        
+        self.navigationController?.popViewControllerAnimated(true)
+        
+        // test this function
     }
     
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
+    func updateWithPerson(person: Person) {
+        
+        self.person = person
+        
+        self.nameTextField.text = person.name
+        self.ageTextField.text = person.age
+        
     }
     
     
@@ -46,3 +71,6 @@ class CreatePersonViewController: UIViewController {
     */
 
 }
+
+/// allow text to be saved so that it can be printed on the previous viewController
+///
