@@ -7,16 +7,37 @@
 //
 
 import UIKit
-import GameplayKit
 
 class PeopleTableViewController: UITableViewController {
+    
+//    var randomName: [Person] = []
+//    var peopleEntries: [Person] = []
     
     /// make the cells display the completed people
     /// permit the cells to delete people
     ///have the number of cells display the number of people created
     
-//    @IBAction func randomizeButtonTapped(sender: AnyObject) {
-//        
+    @IBAction func randomizeButtonTapped(sender: AnyObject) {
+        var personArray: [Person] = []
+        
+        var randomPerson: [Person] = []
+        
+        func randomArray() {
+            randomPerson = personArray
+            
+            for person in randomPerson {
+                if let index = randomPerson.indexOf(person) {
+                    let randomIndex = Int(arc4random_uniform(UInt32(index + 2)))
+                    let removedName = randomPerson.removeAtIndex(index)
+                    randomPerson.insert(removedName, atIndex: randomIndex)
+                }
+            }
+        }
+        
+        tableView.reloadData()
+        
+    }
+//
 //        var personArray = Array(PersonController.sharedController.persons.indices)
 //        var index = personArray.endIndex
 //        
@@ -165,4 +186,12 @@ class PeopleTableViewController: UITableViewController {
     
 
 }
+
+
+    
+    
+    
+    
+    
+
 

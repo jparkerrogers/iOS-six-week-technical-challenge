@@ -19,7 +19,7 @@
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <state key="normal" title="Randomize"/>
                             <connections>
-                                <action selector="randomizeButtonTapped:" destination="Jkt-2v-kmm" eventType="touchUpInside" id="Dqd-AX-bSd"/>
+                                <action selector="randomizeButtonTapped:" destination="Jkt-2v-kmm" eventType="touchUpInside" id="df9-2d-qaa"/>
                             </connections>
                         </button>
                         <prototypes>

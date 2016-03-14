@@ -17,6 +17,7 @@ class CreatePersonViewController: UIViewController {
     var person: Person?
     
     override func viewDidLoad() {
+        
         super.viewDidLoad()
         
     }
