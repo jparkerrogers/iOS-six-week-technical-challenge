@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import GameplayKit
 
 class PeopleTableViewController: UITableViewController {
     
@@ -14,15 +15,34 @@ class PeopleTableViewController: UITableViewController {
     /// permit the cells to delete people
     ///have the number of cells display the number of people created
     
+//    @IBAction func randomizeButtonTapped(sender: AnyObject) {
+//        
+//        var personArray = Array(PersonController.sharedController.persons.indices)
+//        var index = personArray.endIndex
+//        
+//        var randomizer: AnyGenerator<Int> = anyGenerator {
+//            if index == personArray.startIndex { return nil }
+//            index = index.advancedBy(-1, limit: personArray.startIndex)
+//            let random = Int(arc4random_uniform(UInt32(index)))
+//            if random != index {
+//                swap(&personArray[random], &personArray[index])
+//            }
+//        }
+//        
+//    }
+//    
+//    let permGenerator = PermutationGenerator(elements: PersonController.sharedController.persons, indices: AnySequence(randomizer))
+//    let randomized = Array(permGenerator)
+//    
+//    var personsLabel = ""
+//    for var i = 0 i<randomized.count; i++ {
+//    let person = randomized(i)
+//    if i == (randomized.count -1)
+//    }
+//    
+
     
-    @IBAction func randomizeButtonTapped(sender: AnyObject) {
-        
-        let savedCells = PersonController.sharedController.persons.count
-        
-        
-    }
-    
-    
+
     ////// this is where you will randomize AND group the people. they will be in groups of two.
 
     override func viewDidLoad() {
@@ -64,18 +84,23 @@ class PeopleTableViewController: UITableViewController {
         cell.textLabel?.text = person.name
         
         cell.detailTextLabel?.text = person.age
-
+        
         return cell
     }
     
+    
+    
+    
+    
 
-    /*
-    // Override to support conditional editing of the table view.
+    
     override func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {
-        // Return false if you do not want the specified item to be editable.
+       
+        
+        
         return true
     }
-    */
+    
 
     
     // Override to support editing the table view.
@@ -91,6 +116,14 @@ class PeopleTableViewController: UITableViewController {
             // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
         }    
     }
+    
+//    func colorForIndex(index: Int) -> UIColor {
+//        
+//        UIColor.blueColor()
+//        
+//        return UIColor()
+//
+//    }
     
 
     /*

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AC11CA0A1C9390F8009E08FF /* Randomizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC11CA091C9390F8009E08FF /* Randomizer.swift */; };
 		AC71A4D01C9328FC00CE885B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC71A4CF1C9328FC00CE885B /* AppDelegate.swift */; };
 		AC71A4D51C9328FC00CE885B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC71A4D31C9328FC00CE885B /* Main.storyboard */; };
 		AC71A4D71C9328FC00CE885B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AC71A4D61C9328FC00CE885B /* Assets.xcassets */; };
@@ -18,6 +19,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		AC11CA091C9390F8009E08FF /* Randomizer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Randomizer.swift; sourceTree = "<group>"; };
 		AC71A4CC1C9328FC00CE885B /* develp- sixWeekTechnicalChallenge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "develp- sixWeekTechnicalChallenge.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AC71A4CF1C9328FC00CE885B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AC71A4D41C9328FC00CE885B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -66,6 +68,7 @@
 				AC71A4E71C93369600CE885B /* PersonController.swift */,
 				AC71A4E31C93314F00CE885B /* CreatePersonViewController.swift */,
 				AC71A4E11C93311500CE885B /* PeopleTableViewController.swift */,
+				AC11CA091C9390F8009E08FF /* Randomizer.swift */,
 				AC71A4D61C9328FC00CE885B /* Assets.xcassets */,
 				AC71A4D81C9328FC00CE885B /* LaunchScreen.storyboard */,
 				AC71A4DB1C9328FC00CE885B /* Info.plist */,
@@ -148,6 +151,7 @@
 				AC71A4E41C93314F00CE885B /* CreatePersonViewController.swift in Sources */,
 				AC71A4E61C9331BF00CE885B /* Person.swift in Sources */,
 				AC71A4E81C93369600CE885B /* PersonController.swift in Sources */,
+				AC11CA0A1C9390F8009E08FF /* Randomizer.swift in Sources */,
 				AC71A4D01C9328FC00CE885B /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
